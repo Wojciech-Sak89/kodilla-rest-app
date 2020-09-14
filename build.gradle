@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.3.1.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
-	id 'war'
+//	id 'war'
 }
 
 group = 'com.crud'
@@ -16,10 +16,13 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+
 	compile('org.projectlombok:lombok')
 	annotationProcessor('org.projectlombok:lombok')
+
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('mysql:mysql-connector-java')
+//	compile('mysql:mysql-connector-java')
+
 	compile('org.springframework.boot:spring-boot-starter-mail:2.3.1.RELEASE')
 	compile('com.google.code.gson:gson:2.8.2')
 
@@ -33,7 +36,7 @@ dependencies {
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
-//	compile('org.postgresql:postgresql')
+	compile('org.postgresql:postgresql')
 //	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
