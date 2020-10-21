@@ -115,9 +115,14 @@
                                             </tbody>
                                         </table>
                                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-                                            Application functionality:
+                                            Tasks scheduler current mode:
                                         </p>
-                                        <ul th:each="function : ${application_functionality}">
+                                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;" th:text="${scheduler_settings.getEvery_10_seconds()}">
+                                        </p>
+                                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
+                                            Available modes:
+                                        </p>
+                                        <ul th:each="function : ${scheduler_modes}">
                                             <li th:text="${function}"></li>
                                         </ul>
                                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;" th:text="${goodbye_message}"></p>
