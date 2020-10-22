@@ -22,8 +22,8 @@ dependencies {
 
 	//Database
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-//	compile('mysql:mysql-connector-java')
-	compile('org.postgresql:postgresql')
+	compile('mysql:mysql-connector-java')
+//	compile('org.postgresql:postgresql')
 
 	//Mail-Gson-Actuator(LogSystemData)
 	compile('org.springframework.boot:spring-boot-starter-mail:2.3.1.RELEASE')
