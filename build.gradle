@@ -22,7 +22,8 @@ dependencies {
 
 	//Database
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('mysql:mysql-connector-java')
+//	compile('mysql:mysql-connector-java')
+	compile('org.postgresql:postgresql')
 
 	//Mail-Gson-Actuator(LogSystemData)
 	compile('org.springframework.boot:spring-boot-starter-mail:2.3.1.RELEASE')
@@ -30,9 +31,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 
 	//Thymeleaf
-//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //https://start.spring.io/ - Works
-//	compile group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE' //MAVEN CENTRAL - doesn't work :(
-	compile('org.springframework.boot:spring-boot-starter-thymeleaf') //Kodilla - works
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 
 	//Swagger
 	compile('io.springfox:springfox-swagger2:2.7.0')
@@ -40,7 +39,7 @@ dependencies {
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
-//	compile('org.postgresql:postgresql')
+
 //	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 

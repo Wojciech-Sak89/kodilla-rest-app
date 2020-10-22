@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/v1/trello")
 public class TrelloController {
@@ -19,10 +19,9 @@ public class TrelloController {
 //    private TrelloService trelloService;
 //    private TrelloClient trelloClient;
 
-    @RequestMapping(method = RequestMethod.GET, value = "getTrelloBoards")
+    @RequestMapping(method = RequestMethod.GET, value = "boards")
     public List<TrelloBoardDto> getTrelloBoards() {
         return trelloFacade.fetchTrelloBoards();
-
 //        List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 //
 //        trelloBoards.forEach(trelloBoardDto -> {
@@ -46,7 +45,7 @@ public class TrelloController {
 //                        System.out.println(trelloBoardDto.getId() + " " + trelloBoardDto.getName()));\
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "createTrelloCard")
+    @RequestMapping(method = RequestMethod.POST, value = "cards")
     public CreatedTrelloCardDto createTrelloCard(@RequestBody TrelloCardDto trelloCardDto) {
         return trelloFacade.createCard(trelloCardDto);
     }
